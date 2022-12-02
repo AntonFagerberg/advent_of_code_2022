@@ -1,6 +1,7 @@
 package day01
 
 import (
+	"log"
 	"sort"
 	"strconv"
 	"strings"
@@ -17,8 +18,12 @@ func Parse(input []byte) [][]int {
 			res = append(res, part)
 			part = make([]int, 0)
 		} else {
-			i, _ := strconv.Atoi(line)
-			// todo error check
+			i, err := strconv.Atoi(line)
+
+			if err != nil {
+				log.Fatal(err)
+			}
+
 			part = append(part, i)
 		}
 	}
