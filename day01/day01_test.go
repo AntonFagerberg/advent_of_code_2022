@@ -16,11 +16,11 @@ func TestParse(t *testing.T) {
 
 	res := Parse(input)
 	exp := [][]int{
-		[]int{1000, 2000, 3000},
-		[]int{4000},
-		[]int{5000, 6000},
-		[]int{7000, 8000, 9000},
-		[]int{10000},
+		{1000, 2000, 3000},
+		{4000},
+		{5000, 6000},
+		{7000, 8000, 9000},
+		{10000},
 	}
 
 	if !reflect.DeepEqual(res, exp) {
