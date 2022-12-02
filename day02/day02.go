@@ -74,7 +74,6 @@ func part1(input [][]string) int {
 // Y,B = Paper,Draw
 // Z,C = Sissor,Win
 func part2(input [][]string) int {
-
 	for _, v := range input {
 		switch v[1] {
 		case "X":
